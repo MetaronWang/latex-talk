@@ -1,0 +1,117 @@
+{
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex_beamer_one",
+      "tools": [
+        "xelatex"
+      ]
+    },
+    {
+      "name": "xelatex_beamer",
+      "tools": [
+        "xelatex_nopdf",
+        "biber",
+        "xelatex"
+      ]
+    },
+    {
+      "name": "xelatex -> bibtex -> xelatex*2",
+      "tools": [
+        "xelatex_nopdf",
+        // "bibtex",
+        "xelatex_nopdf",
+        "xelatex"
+      ]
+    },
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "xelatex",
+      "tools": [
+        "xelatex_nopdf",
+        "xelatex"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "tools": [
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-shell-escape",
+        "-pdf",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-shell-escape",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "xelatex_nopdf",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-shell-escape",
+        "-no-pdf",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+}

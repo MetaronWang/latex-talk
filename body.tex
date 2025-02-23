@@ -8,18 +8,18 @@
 
 \begin{frame}[fragile]{\TeX 与 \LaTeX{} 的起源}
   \begin{columns}[T]
-    \column{.7\textwidth}
+    % \hspace{-2em}
+    \column{.9\textwidth}
     \begin{itemize}
       \item \TeX: $\tau\varepsilon\chi$ (\textipa{/'tEx/},
         \textipa{/'tEk/})
         \begin{itemize}
           \item 生成精美图书的排版系统
           \item 最初由 高德纳\footnote{1974年图灵奖得主，《计算机程序设计艺术》（The Art of Computer Programming）作者。} (Donald E.~Knuth) 于 1978 年开发  
-          \item 最新版本为 \TeX\ 3.14159265
+          \item 最新版本为 \TeX\ 3.141592653
           \item 漂亮、美观、稳定、通用
           \item 尤其擅长数学公式排版
         \end{itemize}
-
         \vspace{2em}
       \item \LaTeX{}(\textipa{/'la:tEx/}, \textipa{/'leItEk/})
         \begin{itemize}
@@ -31,15 +31,59 @@
     \end{itemize}
     \column{.2\textwidth}
     \vspace*{-5mm}
-    \hspace{-10mm} \includegraphics[width=\textwidth]{Knuth.jpg}
+    \includegraphics[width=\textwidth]{Knuth.jpg}
 
     % \vspace*{5mm}
-    \hspace{-10mm} \includegraphics[width=\textwidth]{Lamport.jpg}
+    \includegraphics[width=\textwidth]{Lamport.jpg}
 
   \end{columns}
 \end{frame}
 
 \subsection{\LaTeX{} 利弊}
+
+\begin{frame}[fragile]{为什么是\LaTeX{}？}
+\textbf{你真的需要\LaTeX{}吗？}
+
+\begin{itemize}
+  \item \textbf{预设定的模板？}
+  \begin{itemize}
+    \item Word同样可以制定各种文档模板
+  \end{itemize}
+  \item \textbf{数学公式输入？}
+  \begin{itemize}
+    \item Word自带的公式功能在大多数情况下是足够使用的
+    \item MathType插件可以实现高质量的公式编辑
+  \end{itemize}
+  \item \textbf{文献与图表公式的交叉引用？}
+  \begin{itemize}
+    \item 通过文献管理软件，Word同样可以方便地进行文献引用
+    \item Word同样可以快捷实现对图表公式的交叉引用
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{为什么是\LaTeX{}？}
+  \textbf{为什么还要选择\LaTeX{}？}
+  
+  \begin{itemize}
+    \item \textbf{更加流畅的编辑体验}
+    \begin{itemize}
+      \item Word中的内容和排版是混合且同步更新的
+      \item 超过10页且包含大量超链接和域的Word文档编辑会变得卡顿
+    \end{itemize}
+    \item \textbf{更加优雅的公式排版}
+    \begin{itemize}
+      \item \LaTeX{}相比于Word原生公式提供了更加丰富的对齐和排版功能
+      \item 无需引入额外的插件
+    \end{itemize}
+    \item \textbf{更加省心的格式控制}
+    \begin{itemize}
+      \item 内容与格式分离，可以专注于内容的书写
+      \item 对于图表公式的交叉引用提供了统一格式，更加便捷
+    \end{itemize}
+  \end{itemize}
+  \end{frame}
 
 \begin{frame}[fragile]{\LaTeX{} 的好处与坏处}
     \textbf{好处}
@@ -95,7 +139,7 @@
     \item<+-> 通用型
   
       \begin{itemize}
-        \item \emph{Visual Studio Code}：借助插件 \pkg{LaTeX Workshop} (James Yu (余剑峤)@ CSE) + \pkg{LaTeX Utilities}
+        \item \emph{Visual Studio Code}：借助插件 \pkg{LaTeX Workshop}  + \pkg{LaTeX Utilities}
         \item Atom：听说很卡？
         \item Sublime Text：收费
         \item Vim：|q|、|q!|、|wq|、|wq!|
@@ -542,6 +586,13 @@
             \begin{itemize}
               \item \LaTeX{} Tables Editor \link{https://www.latex-tables.com/}
               \item \LaTeX{} Table Generator \link{https://www.tablesgenerator.com/latex_tables}
+            \end{itemize}
+          \item 使用Excel插件：excel2latex \link{https://www.ctan.org/tex-archive/support/excel2latex/}
+          \item 想要更加丰富的表格列宽控制和文本对齐功能？试试\pkg{tabularx}
+          \item 命令太复杂，记不住！
+            \begin{itemize}
+              \item 请仔细阅读文档
+              \item 当然，你可以直接向ChatGPT提问，但请描述清楚你的需求，并确认它给出的方案是可行且正确的。
             \end{itemize}
         \end{itemize}
       \end{frame}
