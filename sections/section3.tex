@@ -1,6 +1,6 @@
 \section{宏包与多语言}
 \subsection{宏包和TexLive发行版的关系}
-\begin{frame}{宏包是什么}
+\begin{frame}{怎么获取宏包}
 	% itemize
 	通常直接\textbf{全量安装最新版}TeXLive可以满足绝大多数宏包需求
 	\begin{itemize}
@@ -15,7 +15,7 @@
 	\begin{itemize}
 		\item<+-> Windows
 		      \begin{itemize}
-			      \item 开始菜单里找 TeX Live Manager
+			      \item 开始菜单里找 TeXLive Manager
 			      \item 设置仓库地址 \texttt{tlmgr option repository \url{https://mirrors.sustech.edu.cn/CTAN/systems/texlive/tlnet}}
 			      \item \texttt{tlmgr install <pkgname>} 安装、 \texttt{tlmgr update --self --all} 全部更新
 		      \end{itemize}
@@ -121,7 +121,7 @@
 \end{frame}
 }
 
-\begin{frame}[fragile]{宏包示例: Tikz (画图)}
+\begin{frame}[fragile]{宏包示例: TikZ (画图)}
 	\vspace{-2em}
 	\begin{columns}
 		\begin{column}{.55\textwidth}
@@ -238,6 +238,7 @@ backgrounds, calc, automata} %需先导入所需的tikz形状库
 	\begin{itemize}
 		\item 宏包 \pkg{xeCJK}
 		\item 参考 \url{https://www.overleaf.com/learn/latex/chinese}
+		\item 撰写学位论文时，直接使用sustechthesis模板即可
 	\end{itemize}
 \end{frame}
 

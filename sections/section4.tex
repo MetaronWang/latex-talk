@@ -16,6 +16,7 @@
 		      \begin{itemize}
 			      \item 使用\XeLaTeX{}等编译器对源文件进行编译
 		      \end{itemize}
+	    \item \alert{对照格式要求，检查最终的文件}
 	\end{enumerate}
 \end{frame}
 
@@ -51,7 +52,7 @@
 		      \begin{itemize}
 			      \item CTAN \link{https://ctan.org} 或 GitHub \href{https://github.com}{\faGithub}
 			      \item 期刊/会议官网
-			      \item SUSTech LaTex 模板目录 \link{https://github.com/SUSTC/latex-template}
+			      \item SUSTech LaTeX 模板目录 \link{https://github.com/SUSTC/latex-template}
 			      \item 「U 盘拷给你的模板一定是过时的」
 		      \end{itemize}
 	\end{itemize}
@@ -72,18 +73,19 @@
 \end{frame}
 
 \begin{frame}[fragile]{论文排版举例}
-	\begin{exampleblock}{IEEE 期刊论文}
+	\begin{exampleblock}{南方科技大学学位论文}
 		\begin{itemize}
-			\item 获取模板：已随发行版自带
+			\item 获取模板：github下载
 			      \begin{itemize}
-				      \item 在安装目录 |<prefix>\texlive\2024\texmf-dist\doc\latex\IEEEtran|
-				            下找到 |bare_jrnl.tex|
-				      \item 复制到某个文件夹(比如个人存论文的目录)
+				      \item 打开\url{https://github.com/SUSTech-CRA/sustech-master-thesis/releases}
+				      \item 下载最新版
+				      \item 解压到某个文件夹(比如个人存论文的目录)
 			      \end{itemize}
-			\item 编辑 |bare_jrnl.tex| 文件 (英文模板：不支持中文)
+			\item 仔细阅读README
+			\item 编辑 |sustechthesis-example.tex, sustech-setup.tex| 等源文件 
 			\item 编译
 			      \begin{itemize}
-				      \item 英文文献：\XeLaTeX 、\pdfLaTeX 编译均可
+				      \item 运行命令|latexmk sustechthesis-example.tex|
 			      \end{itemize}
 		\end{itemize}
 	\end{exampleblock}

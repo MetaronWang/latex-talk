@@ -7,8 +7,8 @@
 \begin{frame}[fragile]{文件结构}
     \lstset{language=[LaTeX]TeX}
     \begin{lstlisting}[basicstyle=\ttfamily]
-  \documentclass[a4paper]{article}
-  % 文档类型，如 article，[]内是选项，如 a4paper
+  \documentclass[degree=doctor,language=chinese,font=external,cjk-font=external]{sustechthesis}
+  % 文档类型，如 sustechthesis，[]内是选项，如 degree=doctor
   % 这里开始是导言区
   \usepackage{graphicx} % 引用宏包
   \graphicspath{{fig/}} % 设置图片目录
@@ -27,7 +27,7 @@
         \item 简单命令
             \begin{itemize}
                 \item \verb|\命令|\hspace{2em}
-                    \verb|{\songti 中国人民解放军}| ~$\Rightarrow$ {\songti 中国人民解放军}
+                    \verb|{\heiti 茴字的四种写法}| ~$\Rightarrow$ {\heiti 茴字的四种写法}
                 \item \verb|\命令[可选参数]{必选参数}|\\
                     \verb|\section[精简标题]{这个题目实在太长了放到目录里面不太好看}|\\
                     $\Rightarrow$ {\heiti 1.1 \hspace{1em} \songti 这个题目实在太长了放到目录里面不太好看}
@@ -66,22 +66,21 @@
 % \end{frame}
 \begin{frame}[fragile]{谋篇布局}
     \begin{itemize}
-        \item 文档部件
-
+        \item 一篇学位论文包括：
               \begin{itemize}
                   \item 标题：|\title|、|\author|、|\date| $\to$ |\maketitle|
                   \item 摘要：|abstract| 环境
                   \item 目录：|\tableofcontents|
                   \item 章节：|\chapter|、|\section|、|\subsection| 等
-                  \item 图表：|\table|、|\figure|
+                  \item 图表：|table|、|figure|环境
                   \item 引用：|\label|、|\cite|、|\ref|
                   \item 文献：|\bibliography|
+                  \item 附录：|\appendix|
+                  \item 致谢：|acknowledgements| 环境
               \end{itemize}
-
         \item 文档划分
-
               \begin{itemize}
-                  \item 凤头猪肚豹尾：|\frontmatter|、|\mainmatter|、|\backmatter|
+                  \item 页码划分：|\frontmatter|、|\mainmatter|、|\backmatter|
                   \item 分文件编译：|\include|、|\input|
               \end{itemize}
     \end{itemize}
@@ -134,14 +133,10 @@
 \end{itemize}\end{lstlisting}
     \end{minipage}\hspace{1.5cm}
     \begin{minipage}{0.3\linewidth}
-        \begin{itemize}
-            \item 一条
-            \item 次条
-            \item 这一条可以分为 ...
-                  \begin{itemize}
-                      \item 子一条
-                  \end{itemize}
-        \end{itemize}
+        \(\bullet\)\quad 一条\\
+        \(\bullet\)\quad 次条\\
+        \(\bullet\)\quad 这一条可以分为 ... \\
+        \quad - \quad 子一条
     \end{minipage}
     % \smallskip
 
@@ -155,11 +150,9 @@
     \end{minipage}\hspace{1.5cm}
     \begin{minipage}{0.3\linewidth}
         \vspace{-1cm}
-        \begin{enumerate}
-            \item 一条
-            \item 次条
-            \item 再条
-        \end{enumerate}
+        1.\quad 一条\\
+        2.\quad 次条\\
+        3.\quad 再条
     \end{minipage}
 \end{frame}
 %
@@ -171,9 +164,9 @@
 \begin{enumerate}
 \item \LaTeX{} 好处都有啥
     \begin{description}
-    \item[好用] 体验好才是真的好
-    \item[好看] 强迫症的福音
-    \item[开源] 众人拾柴火焰高
+    \item[好用：] 体验好才是真的好
+    \item[好看：] 强迫症的福音
+    \item[开源：] 众人拾柴火焰高
     \end{description}
 \item 还有呢?
     \begin{itemize}
@@ -184,19 +177,13 @@
         \end{column}
         \begin{column}{.4\textwidth}
             {\small
-                \begin{enumerate}
-                    \item \LaTeX{} 好处都有啥
-                          \begin{description}
-                              \item[好用] 体验好才是真的好
-                              \item[好看] 治疗强迫症
-                              \item[开源] 众人拾柴火焰高
-                          \end{description}
-                    \item 还有呢?
-                          \begin{itemize}
-                              \item 好处 1
-                              \item 好处 2
-                          \end{itemize}
-                \end{enumerate}
+                1.\quad \LaTeX{} 好处都有啥\\
+                \quad 好用： 体验好才是真的好\\
+                \quad 好看： 治疗强迫症\\
+                \quad 开源： 众人拾柴火焰高\\
+                2.\quad 还有呢?\\
+                \quad -\quad 好处 1\\
+                \quad -\quad 好处 2
             }
         \end{column}
     \end{columns}
@@ -235,7 +222,8 @@
         \begin{column}{.5\textwidth}
             \lstset{language=[LaTeX]TeX}
             \begin{lstlisting}[basicstyle=\ttfamily\small]
-体积公式为：\(V = \frac{4}{3}\pi r^3\)。
+体积公式为：
+\(V = \frac{4}{3}\pi r^3\)。
 
 体积公式为：
 \[
@@ -274,22 +262,20 @@ V = \frac{4}{3}\pi r^3
             \lstset{language=[LaTeX]TeX}
             \begin{lstlisting}[basicstyle=\ttfamily\small]
     \tableofcontents % 这里是目录
-    \part{监督学习}
-    \chapter{支持向量机}
-    \section{支持向量机简介}
-    \subsection{支持向量机的历史}
-    \subsubsection{支持向量机的诞生}
-    \paragraph{一些趣闻}
-    \subparagraph{第一个趣闻}\end{lstlisting}
+    \chapter{绪\quad 论}
+    \section{研究工作的背景及意义}
+    \section{国内外研究现状}
+    \subsection{现有工作不足}
+    \appendix
+    \chapter{策略梯度公式推导}\end{lstlisting}
         \end{column}
         \begin{column}{.4\textwidth}
-            第一部分\quad 有监督学习\\
-            第一章\quad 支持向量机 \\
-            1. 支持向量机简介 \\
-            1.1 支持向量机的历史 \\
-            1.1.1 支持向量机的诞生 \\
-            一些趣闻  \\
-            第一个趣闻
+            \heiti
+            {\centering 第一章\quad 绪\quad 论 \\}
+            1.1 研究工作的背景及意义 \\
+            1.2 国内外研究现状 \\
+            1.2.1 现有工作不足 \\
+            {\centering 附录 A\quad 策略梯度公式推导\\}
         \end{column}
     \end{columns}
 
@@ -310,8 +296,7 @@ V = \frac{4}{3}\pi r^3
         \begin{lstlisting}
 \begin{figure}[htbp]
 \centering
-\includegraphics[height=.2\textheight]%
-{LOGO.png}
+\includegraphics[height=.2\textheight]{LOGO.png}
 \caption{南科大校徽。}
 \label{fig:sustech:LOGO}
 \end{figure}
@@ -369,6 +354,7 @@ V = \frac{4}{3}\pi r^3
                   \item |h| 当前位置(here), |t| 顶部(top), |b| 底部(bottom), |p| 单独成页(p)
                   \item |!h| 表示忽略一些限制，|H| 表示强制\alert{（强烈不建议，除非你知道自己在做什么）}
               \end{itemize}
+        \item 必要时，可以通过在段落中间插入浮动体的方式，来使得页面上下不留出太多空白。
     \end{itemize}
 \end{frame}
 
@@ -430,7 +416,7 @@ V = \frac{4}{3}\pi r^3
               \begin{itemize}
                   \item Google Scholar 可直接复制：点击 \faQuoteRight \quad -> BibTeX
                   \item 用 EndNote、Jabref 等生成
-                  \item 一定注意校对！！！
+                  \item \alert{一定注意校对！！！}
               \end{itemize} \pause
         \item 传统方法（大部分会议、期刊模板）：\BibTeX  后端
               \begin{itemize}
